@@ -1,0 +1,28 @@
+:root {
+	// Colors vars
+	--gray: #e8e8e8;
+	--light: #ffffff;
+	--dark: rgb(21, 20, 20) f;
+	--primary: #001e60;
+	--accent: #c58a4d;
+	--primaryGray: #e4e4e4;
+	--secondaryGray: #f2f2f2;
+	--colorScrollBar: var(--accentColor);
+	--warning: #ff8b10;
+	--error: #ff0000;
+	--success: #00a10f;
+
+	// Font vars
+	--font-family: 'Montserrat', 'Open sans', 'Arial', 'Sans serif', 'sans-serif';
+
+	// Rounded vars
+	--radius: 5rem;
+
+	// Paddings vars
+	--padding: 0.5rem 1.2rem;
+
+	// Behaviors
+	--disabled-opacity: 0.7;
+
+	font-family: var(--font-family);
+}

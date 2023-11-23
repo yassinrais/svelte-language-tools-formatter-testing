@@ -1,0 +1,66 @@
+@mixin circle-spinner($size, $thickness, $color) {
+	&::after {
+		content: '';
+		position: absolute;
+		left: calc(50% - $size / 2 - #{$thickness}px);
+		top: calc(50% - $size / 2 - #{$thickness}px);
+		border: #{$thickness}px solid $color;
+		border-top-color: rgb(0 0 0 / 0);
+		border-left-color: rgb(0 0 0 / 0);
+		width: $size;
+		height: $size;
+		border-radius: 50%;
+		animation: circle-spinner 0.7s infinite linear;
+		-webkit-animation: circle-spinner 0.7s infinite linear;
+	}
+
+	@keyframes circle-spinner {
+		from {
+			transform: rotate(0deg);
+		}
+
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	@keyframes circle-spinner {
+		from {
+			-webkit-transform: rotate(0deg);
+		}
+
+		to {
+			-webkit-transform: rotate(360deg);
+		}
+	}
+}
+
+@mixin transition-all {
+	transition-property: all;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+}
+
+@mixin no-scroll {
+	& {
+		-ms-overflow-style: none; /* Internet Explorer 10+ */
+		scrollbar-width: none; /* Firefox */
+	}
+	&::-webkit-scrollbar {
+		display: none; /* Safari and Chrome */
+	}
+}
+
+@mixin select-none {
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+@mixin button-reset {
+	padding: 0;
+	border: none;
+	font: inherit;
+	color: inherit;
+	background-color: transparent;
+	cursor: pointer;
+}
